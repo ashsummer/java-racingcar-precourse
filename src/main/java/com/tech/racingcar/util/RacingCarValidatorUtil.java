@@ -34,4 +34,13 @@ public class RacingCarValidatorUtil {
         String regExp = "^[1-9]+$";
         return input.checkMatch(regExp);
     }
+
+    public boolean checkStringsLength(Inputs inputs) {
+        boolean isTrue = true;
+        for(int i = 0; i < inputs.getSize(); i++){
+           isTrue = checkStringLength(inputs.getIndexOfInput(i))? true:false;
+           if(!isTrue) break;
+        }
+        return isTrue;
+    }
 }

@@ -7,7 +7,7 @@ public class Inputs {
     public Inputs(String[] strings){
         inputs = new Input[strings.length];
         for(int i = 0; i < strings.length; i++){
-            inputs[i] = new Input(strings[i]);
+            inputs[i] = new Input(strings[i].trim());
         }
     }
 

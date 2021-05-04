@@ -15,4 +15,8 @@ public class Position {
     public int getPosition(){
         return position;
     }
+
+    public void addPosition() {
+        position++;
+    }
 }

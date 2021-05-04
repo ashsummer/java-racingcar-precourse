@@ -27,4 +27,17 @@ public class RacingCar implements Comparable<RacingCar>{
         return this.carPosition.getPosition() - o.carPosition.getPosition();
     }
 
+    public RacingCarStatus getRacingCarStatus() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(carName.getName());
+        sb.append(" : ");
+        for(int i = 0; i < carPosition.getPosition(); i++){
+            sb.append("-");
+        }
+        return new RacingCarStatus(sb.toString());
+    }
+
+    public void addCarPosition() {
+        carPosition.addPosition();
+    }
 }

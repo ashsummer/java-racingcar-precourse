@@ -6,8 +6,6 @@ import com.tech.racingcar.domain.RandomNumber;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.util.Random;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class RacingGameServiceTest {
@@ -35,12 +33,5 @@ public class RacingGameServiceTest {
         assertTrue(racingCarList.getIndexOfCar(1).getCarPosition().getPosition() == 0);
     }
 
-    @Test
-    @DisplayName("RacingCar_전진_후진_리스트_반영_확인")
-    void checkRacingCarsRunOrStop(){
-        Inputs inputs = new Inputs(new String[]{"hello","hi"});
-        RacingCarList racingCarList = racingGameService.makeRacingCarList(inputs);
-        racingGameService.reflectRacingCarPosition();
-    }
 
 }

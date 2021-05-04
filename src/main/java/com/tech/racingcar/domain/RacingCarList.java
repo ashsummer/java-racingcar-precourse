@@ -18,4 +18,8 @@ public class RacingCarList {
         return racingCars.size();
     }
 
+    public ArrayList<RacingCar> getList(){
+        return racingCars;
+    }
+
 }
