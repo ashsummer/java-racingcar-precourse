@@ -1,6 +1,7 @@
 package com.tech.racingcar.service;
 
 import com.tech.racingcar.domain.Inputs;
+import com.tech.racingcar.domain.RacingCarList;
 import com.tech.racingcar.domain.RandomNumber;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -28,10 +29,10 @@ public class RacingGameServiceTest {
         Inputs inputs = new Inputs(new String[]{"hello","hi"});
         RacingCarList racingCarList = racingGameService.makeRacingCarList(inputs);
         assertEquals(racingCarList.getSize(),2);
-        assertTrue(racingCarList.getIndex(0).getCarName().getName().equals("hello"));
-        assertTrue(racingCarList.getIndex(1).getCarName().getName().equals("hi"));
-        assertTrue(racingCarList.getIndex(0).getCarPosition().getPosition().equals(0));
-        assertTrue(racingCarList.getIndex(1).getCarPosition().getPosition().equals(0));
+        assertTrue(racingCarList.getIndexOfCar(0).getCarName().getName().equals("hello"));
+        assertTrue(racingCarList.getIndexOfCar(1).getCarName().getName().equals("hi"));
+        assertTrue(racingCarList.getIndexOfCar(0).getCarPosition().getPosition() == 0);
+        assertTrue(racingCarList.getIndexOfCar(1).getCarPosition().getPosition() == 0);
     }
 
     @Test

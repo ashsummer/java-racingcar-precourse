@@ -19,4 +19,8 @@ public class Input {
     public boolean isEqualsWithString(String string){
         return input.equals(string);
     }
+
+    public String getString(){
+        return input;
+    }
 }
